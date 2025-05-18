@@ -1,0 +1,25 @@
+.container {
+   display: grid;
+   grid-template-columns: 50px 50px 50px;
+   gap: 20px;
+   grid-template-rows: 50px 50px 50px;
+   color:yellow;
+   }
+.container1{
+   display: grid;
+   grid-template-columns: repeat(9, 50px);
+   gap: 20px;
+   grid-auto-flow: column;
+   grid-template-rows: 50px;
+   color: yellow;
+   align-self: flex-end;
+}
+.flex-con{
+   display: flex;
+   height: 500px;
+   justify-content: center;
+}
+.black{
+   background: black !important;
+   color: black;
+}

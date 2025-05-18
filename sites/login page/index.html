@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        body {
+            background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-top: 40px;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 12px #f093fb99;
+        }
+
+        form {
+            background: #fff;
+            max-width: 350px;
+            margin: 40px auto;
+            padding: 32px 28px 24px 28px;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        label {
+            font-weight: 500;
+            color: #222;
+            margin-bottom: 4px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 7px;
+            font-size: 1rem;
+            background: #f9fafb;
+            transition: border 0.2s;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border: 1.5px solid #f5576c;
+            outline: none;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px 0;
+            border: none;
+            border-radius: 8px;
+            background: #f5576c;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background: #c81d5f;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login Page</h1>
+    <form action="index.html" method="get">
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="remember" style="display: flex; align-items: center; gap: 6px;">
+            <input type="checkbox" id="remember" name="remember">
+            Remember me
+        </label>
+
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>

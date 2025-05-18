@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Персональный сайт</title>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+   text-decoration: none;
+}
+
+body {
+    background: linear-gradient(120deg, #fda085 0%, #f6d365 100%);
+    font-family: "Segoe UI", Calibri, Arial, sans-serif;
+    font-weight: 500;
+    min-height: 100vh;
+}
+
+header {
+    background: #ff7939;
+    border-bottom: none;
+    box-shadow: 0 2px 12px rgba(255, 121, 57, 0.12);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 16px 24px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+    background: #fff3e6;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    line-height: 48px;
+    font-size: 19px;
+    padding: 0 18px;
+    color: #222;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover, .button:hover {
+    background: #ffb47b;
+    color: #fff;
+}
+
+nav ul li:last-child {
+    background: #222;
+    border-radius: 8px;
+}
+
+.login {
+    color: #fff !important;
+    font-weight: 900;
+}
+
+.add_header {
+    background: transparent;
+    padding: 36px 0 18px 0;
+}
+
+.slogan {
+    font-size: 44px;
+    color: #222;
+    text-shadow: 0 2px 12px #fff3e6;
+    opacity: 0.8;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 12px;
+    background: #fff;
+    color: #ff7939;
+    font-size: 22px;
+    font-weight: 600;
+    box-shadow: 0 2px 12px rgba(255,121,57,0.10);
+    border: 2px solid #ff7939;
+    margin: 0 auto;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.articles {
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.article {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 28px 32px;
+    gap: 32px;
+    border: none;
+    transition: box-shadow 0.2s;
+}
+
+.article:hover {
+    box-shadow: 0 8px 32px rgba(255,121,57,0.12);
+}
+
+.article_img img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(255,121,57,0.10);
+}
+
+.article_text {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-left: 18px;
+    margin-right: 18px;
+    flex: 1;
+}
+
+.article h3 {
+    font-size: 1.5rem;
+    color: #ff7939;
+    margin-bottom: 12px;
+    min-width: 80px;
+    margin-right: 12px;
+    margin-top: 0;
+}
+
+@media (max-width: 800px) {
+    .container, .articles {
+        max-width: 98vw;
+        padding: 8px;
+    }
+    .article {
+        flex-direction: column;
+        align-items: center;
+        padding: 18px 10px;
+        gap: 16px;
+    }
+    .article_img img {
+        width: 90px;
+        height: 90px;
+    }
+    .slogan {
+        font-size: 30px;
+    }
+}
+
+</style>
+</head>
+<body>
+    <div class="add_header">
+        <div class="container">
+            <p class="slogan">Tell the true</p>
+            <a href="#"><div class="button">Press the button or write the article</div></a>
+        </div>
+    </div>
+	<header>
+		<div class="container">
+			<img src="" class="logo">
+			<nav>
+				<ul>
+					<li><a href="#">About us</a></li>
+					<li><a href="#">Write</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#" class="login">Sign in</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+    <div class="articles">
+        <div class="article">
+            <h3>CAT</h3>
+            <div class="article_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi neque ex minima at velit quas nesciunt voluptas adipisci atque aperiam, maxime, voluptates recusandae sapiente consequatur commodi obcaecati assumenda. Eveniet, veritatis?
+            </div>
+            <div class="article_img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0A0RdcBNoBv4yFCNOK7N7bL9ouWsQuA8sQ&s" alt=""></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

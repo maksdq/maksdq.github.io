@@ -1,0 +1,22 @@
+.container *{
+   width: 100px;
+   height: 100px;
+   border-radius: 20px;
+}
+.container {
+   display: flex;
+   font: trebuchet;
+   justify-content: center;
+}
+.box1 {
+   background-color: red;
+}
+.box2 {
+   background-color: blue;
+}
+.box3 {
+   background-color: yellow;
+}
+.box4 {
+   background-color: magenta;
+}

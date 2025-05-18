@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Robocode WEB challenge</title>
+    <style>
+        #task1, #task2, #task3, #task4, #task5 {  display: none; }
+
+        #task1-toggle:checked ~ #task1 { display: block; }
+        #task2-toggle:checked ~ #task2 { display: block; }
+        #task3-toggle:checked ~ #task3 { display: block; }
+        #task4-toggle:checked ~ #task4 { display: block; }
+        #task5-toggle:checked ~ #task5 { display: block; }
+
+        .toggle {  display: none;  }
+
+        body{
+            font-size: 20px;
+            padding: 20px;
+            font: bolder;
+            background-image: linear-gradient(270deg, #2376ae 0%, #c16ecf 100%);
+            color: white;
+            text-shadow: 0 0 2px black;
+        }
+
+        header, ul{
+            background: rgba(0,0, 0, 0.5);
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            width: 500px;
+            margin: 10px auto;
+        }
+        #task3 { display: block; }
+    </style>
+</head>
+<body>
+    <header><h1>Robocode WEB challenge</h1></header>
+    
+    <ul class="mainMenu">
+        <li><label for="task1-toggle">Task 1</label></li>
+        <li><label for="task2-toggle">Task 2</label></li>
+        <li><label for="task3-toggle">Task 3</label></li>
+        <li><label for="task4-toggle">Task 4</label></li>
+        <li><label for="task5-toggle">Task 5</label></li>
+    </ul>
+    
+    
+    <input type="radio" name="task" id="task1-toggle" class="toggle">
+    <input type="radio" name="task" id="task2-toggle" class="toggle">
+    <input checked type="radio" name="task" id="task3-toggle" class="toggle">
+    <input type="radio" name="task" id="task4-toggle" class="toggle">
+    <input type="radio" name="task" id="task5-toggle" class="toggle">
+    
+    
+    <div id="task1">
+        Task 1
+                        <style>
+                .table_component {
+                    overflow: auto;
+                    width: 100%;
+                }
+
+                .table_component table {
+                    border: 5px solid #dededf;
+                    height: 100%;
+                    width: 90%;
+                    table-layout: auto;
+                    border-collapse: collapse;
+                    border-spacing: 1px;
+                    text-align: left;
+                }
+
+                .table_component caption {
+                    caption-side: top;
+                    text-align: center;
+                }
+
+                .table_component th {
+                    border: 5px solid #dededf;
+                    background-color: #e6e6e6;
+                    color: #000000;
+                    padding: 5px;
+                }
+
+                .table_component td {
+                    border: 5px solid #dededf;
+                    background-color: #ffffff;
+                    color: #000000;
+                    padding: 5px;
+                }
+                </style>
+                <div class="table_component" role="region" tabindex="0">
+                <table>
+                    <caption>
+                        <p><br></p>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>
+                                <font>
+                                    <font>№</font>
+                                </font>
+                            </th>
+                            <th>
+                                <font>
+                                    <font>понеділок</font>
+                                </font>
+                            </th>
+                            <th>
+                                <font>
+                                    <font>вівторок</font>
+                                </font>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <font>
+                                    <font>1</font>
+                                </font>
+                            </td>
+                            <td>Math</td>
+                            <td>History</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <font>
+                                    <font>2</font>
+                                </font>
+                            </td>
+                            <td>English</td>
+                            <td>Math</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <font>
+                                    <font>3</font>
+                                </font>
+                            </td>
+                            <td>PE</td>
+                            <td>Art</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <font>
+                                    <font>4</font>
+                                </font>
+                            </td>
+                            <td>Ukrainian</td>
+                            <td>Literature<br></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <font>
+                                    <font>5</font>
+                                </font>
+                            </td>
+                            <td>Math</td>
+                            <td>English</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+    </div>
+
+<div id="task2">
+    <form>
+        <i><b>Name</b></i><br>
+        <input type="text" required><br><br>
+
+        <i><b>Surname</b></i><br>
+        <input type="text"><br><br>
+
+        <i><b>E-mail</b></i>
+        <input type="email"><br><br>
+
+        <i><b>Phone number</b></i>
+        <input type="phone"><br><br>
+
+        <i><b>Comment</b></i>
+        <textarea></textarea><br><br>
+
+        <input type="button" value="Send">
+    </form>
+</div>
+
+    <div id="task3">
+        <div class="flag">
+            <div class="circle"></div>
+        </div>
+    </div>
+    
+    <div id="task4">
+        <h2>Task 4</h2>
+        <img src="" alt="Крута картинка">
+        Якийсь текст
+    </div>
+    
+    <div id="task5">
+        <h2>Task 5</h2>
+        <br>⚡
+        <br>⚡⚡
+        <br>⚡⚡⚡
+    </div>
+
+</body>
+</html>

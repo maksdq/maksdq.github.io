@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            background: #f4f6fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 30px;
+        }
+        form {
+            background: #fff;
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 30px 40px 20px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        label {
+            font-weight: 500;
+            color: #222;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 4px;
+            margin-bottom: 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+            background: #f9fafb;
+            transition: border 0.2s;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="email"]:focus,
+        input[type="date"]:focus,
+        textarea:focus,
+        select:focus {
+            border: 1.5px solid #4f8cff;
+            outline: none;
+        }
+        textarea {
+            min-height: 60px;
+            resize: vertical;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .inline-group {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 16px;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 6px;
+        }
+        input[type="file"] {
+            margin-top: 6px;
+            margin-bottom: 16px;
+        }
+        input[type="reset"],
+        input[type="button"] {
+            padding: 10px 24px;
+            border: none;
+            border-radius: 6px;
+            background: #4f8cff;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+        input[type="reset"]:hover,
+        input[type="button"]:hover {
+            background: #2563eb;
+        }
+        select {
+            height: 38px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration</h1>
+    <form> 
+        <div class="form-group">
+            <label>Name:</label>
+            <input type="text" placeholder="Taras">
+        </div>
+        <div class="form-group">
+            <label>Surname:</label>
+            <input type="text" placeholder="Indus">
+        </div>
+        <div class="form-group">
+            <label>Password:</label>
+            <input type="password" placeholder="Your password">
+        </div>
+        <div class="form-group">
+            <label>Leave your comment:</label>
+            <textarea placeholder="Your comment"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="email" placeholder="Your email">
+        </div>
+        <div class="form-group">
+            <label>Date of birth:</label>
+            <input type="date">
+        </div>
+        <div class="form-group">
+            <label>Send file:</label>
+            <input type="file">
+        </div>
+        <div class="form-group">
+            <label>Your gender:</label>
+            <div class="inline-group">
+                <label><input type="radio" name="gender"> Man</label>
+                <label><input type="radio" name="gender"> Woman</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Choose:</label>
+            <div class="inline-group">
+                <label><input type="checkbox" name="test1"> Test</label>
+                <label><input type="checkbox" name="test2"> Test 2</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Where you live?</label>
+            <select size="1">
+                <option>Kyiv</option>
+                <option>Yahotyn</option>
+                <option>Zhytomyr</option>
+                <option>Lviv</option>
+                <option>Odessa</option>
+                <option>Lugansk</option>
+                <option>Chekassy</option>
+                <option>Sumy</option>
+            </select>
+        </div>
+        <input type="reset" value="Reset"> 
+        <input type="button" value="Send">
+    </form>
+</body>
+</html>
