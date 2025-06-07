@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #f7f5ff;
+    color: #222;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 40px 0 40px;
+}
+
+.logo {
+    font-weight: bold;
+    color: #3a5ca8;
+    font-size: 1.5em;
+}
+
+nav a {
+    margin-left: 24px;
+    text-decoration: none;
+    color: #3a5ca8;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 32px 16px 0 16px;
+}
+
+h1 {
+    font-size: 2.3em;
+    margin-bottom: 0.2em;
+    font-weight: bold;
+    color: #3a5ca8;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 32px;
+    text-align: left;
+}
+
+.project.reverse {
+    flex-direction: row-reverse;
+}
+
+.project-img img {
+    width: 220px;
+    height: 260px; /* було 160px, стало вище */
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(60,60,100,0.08);
+}
+
+.project-desc {
+    flex: 1;
+}
+
+.project-desc h2 {
+    font-size: 1.2em;
+    color: #b49a3a;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.project-desc p {
+    color: #444;
+    font-size: 1em;
+    margin: 0;
+}
+
+.project-divider {
+    border: none;
+    border-top: 2px solid #e5d96c;
+    width: 60%;
+    margin: 40px auto;
+}
+
+footer {
+    background: #7b3ff2;
+    color: #fff;
+    margin-top: 48px;
+    padding: 32px 0 16px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.footer-content .social a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: underline;
+    font-size: 1.1em;
+}
+
+@media (max-width: 900px) {
+    .project {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+    .project.reverse {
+        flex-direction: column;
+    }
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
