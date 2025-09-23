@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Maksde - Links</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preload" href="./images/bg.png" as="image" />
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        
+        setTimeout(() => {
+          const main = document.querySelector("main");
+          main.style.opacity = 1;
+          main.style.filter = "blur(0px)";
+        }, 1000);
+      });
+    </script>
+  </head>
+  <body>
+    <main class="animated">
+      <header>
+        <img src="./images/ava_tg.png" /> 
+        <br>
+        <h1 class="field jarOwnerInfo"><span><img class="verified-owner-checkmark" src="./images/verification.svg" title="" height="15" width="20"></span></div> @maksdq</h1>
+      </header>
+      <ul>
+        <li>
+          <a href="https://twitch.tv/maksdq">
+            <img src="./images/twitch_ico.svg" alt="Twitch" width="20" />
+            Twitch
+          </a>
+        </li>
+        <li>
+          <a href="https://t.me/maksdq">
+            <img src="./images/tg_ico.svg" alt="Telegram" width="20" />
+            Telegram
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://ovk.to/maksde">
+            <img src="./images/ovk_ico.svg" alt="OpenVK" width="20" />
+            OpenVK
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/maksdeded">
+            <img src="./images/x-logo.svg" alt="X (Twitter)" width="20" />
+            X (Twitter)
+          </a>
+        </li>
+        <li>
+          <a href="https://maksde.link">
+            <img src="./images/link_ico.svg" alt="Other links" width="20" />
+            Other links
+          </a>
+        </li>
+      </ul>
+    </main>
+    <div id="radioheart-player"
+    class="panel-white"
+    data-stream="https://listen.myrh.ru/maksderadio"
+    data-autostart="false"
+    data-volume="0.5"
+    data-logo="https://kappa.lol/UvLqM"
+    data-playtext="Maksde Radio"
+>
+   <div class="player-wrapper">
+       <div class="logo" id="radioheart-player-logo" title=""></div>
+       <div class="controls">
+           <div class="play" id="radioheart-player-play">
+               <i class="fa fa-play"></i>
+           </div>
+           <div class="pause hidden" id="radioheart-player-pause">
+               <i class="fa fa-stop"></i>
+           </div>
+       </div>
+       <div class="current-song marquee"
+            id="radioheart-player-current-song"
+            data-marquee=""
+       >
+       </div>
+       <div class="sound-control">
+           <div class="mute-control">
+               <div class="mutecontrol active" id="radioheart-player-mute"></div>
+           </div>
+           <div class="volume-control">
+               <div class="volume" id="radioheart-player-volume"></div>
+           </div>
+       </div>
+   </div>
+</div>
+  </body>
+</html>
