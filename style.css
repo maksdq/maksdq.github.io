@@ -1,0 +1,258 @@
+:root {
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.6);
+    --accent: #ff007f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    /* Хайповий анімований градієнт замість картинки */
+    background: linear-gradient(-45deg, #090014, #3a005c, #001f5c, #004d40);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.profile {
+    text-align: center;
+    animation: fadeInDown 1s ease-out;
+}
+
+.avatar-container {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 1.5rem;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease;
+}
+
+.avatar-container:hover .avatar {
+    transform: scale(1.08) rotate(3deg);
+    border-color: #00e5ff;
+}
+
+.glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff007f, #00e5ff);
+    filter: blur(25px);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.avatar-container:hover .glow {
+    opacity: 0.8;
+}
+
+.name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    letter-spacing: -0.05em;
+    margin-bottom: 0.2rem;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.verified {
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(0 0 5px rgba(0, 229, 255, 0.5));
+}
+
+.bio {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* Glassmorphism картки */
+.link-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 1.25rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s ease, border-color 0.3s ease;
+    animation: slideUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+    animation-delay: calc(var(--delay) * 0.15s + 0.2s);
+}
+
+/* Ефект підсвітки за мишкою */
+.link-card::before {
+    content: '';
+    position: absolute;
+    top: var(--y, 50%);
+    left: var(--x, 50%);
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.link-card:hover::before {
+    opacity: 1;
+}
+
+.link-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 15px 35px -10px rgba(0,0,0,0.6);
+}
+
+.link-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    margin-right: 1.25rem;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s ease;
+    z-index: 1;
+}
+
+.link-icon img {
+    width: 26px;
+    height: 26px;
+    /* У оригіналі іконки могли бути чорними, інвертуємо для темної теми */
+    filter: invert(1);
+}
+
+.link-card:hover .link-icon {
+    transform: scale(1.15);
+    background: linear-gradient(135deg, #ff007f, #00e5ff);
+}
+
+.link-text {
+    flex-grow: 1;
+    font-size: 1.25rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.link-arrow {
+    font-size: 1.5rem;
+    opacity: 0;
+    transform: translate(-10px, 10px);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+    z-index: 1;
+}
+
+.link-card:hover .link-arrow {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+footer {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    animation: fadeIn 1s ease-out 1.2s forwards;
+    opacity: 0;
+    letter-spacing: 0.05em;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .link-card {
+        padding: 1rem 1.2rem;
+    }
+    
+    .name {
+        font-size: 1.8rem;
+    }
+    
+    .link-text {
+        font-size: 1.1rem;
+    }
+}

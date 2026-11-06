@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>404 — Links</title>
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="preload" href="./images/bg.png" as="image" />
+        <script>
+    window.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+            const main = document.querySelector("main");
+            if (main) {
+                main.style.opacity = 1;
+                main.style.filter = "blur(0px)";
+            }
+            document.body.classList.add("loaded");
+        }, 300);
+        document.getElementById("toTopBtn").onclick = () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    });
+
+    window.addEventListener("scroll", () => {
+        const btn = document.getElementById("toTopBtn");
+        if (!btn) return;
+        if (window.scrollY > 200) {
+            btn.style.opacity = "1";
+            btn.style.pointerEvents = "auto";
+        } else {
+            btn.style.opacity = "0";
+            btn.style.pointerEvents = "none";
+        }
+    });
+</script>
+    </head>
+    <body>
+        <main class="animated" style="display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:70vh;text-align:center;">
+            <div style="margin-top:40px;">
+                <div style="font-size:120px;line-height:1;font-weight:700;">404</div>
+                <div style="font-size:20px;margin-top:12px;">Page not found 💔</div>
+            </div>
+        </main>
+        <button id="toTopBtn" title="Вгору">↑</button>
+        <footer>
+            © 2025 Maksde. Всі права вкрадено.
+        </footer>
+    </body>
+</html>

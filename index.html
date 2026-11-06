@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maksde - Links</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Трендовий шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="profile">
+            <div class="avatar-container">
+                <img src="./images/ava_tg.png" alt="Maksde" class="avatar" oncontextmenu="return false;" draggable="false">
+                <div class="glow"></div>
+            </div>
+            <h1 class="name">
+                @maksdq
+                <img src="/images/verification.svg" class="verified" alt="Verified" width="20" height="20">
+            </h1>
+            <p class="bio">Content Creator</p>
+        </header>
+
+        <main class="links">
+            <a href="https://twitch.tv/maksdq" class="link-card" style="--delay: 1">
+                <div class="link-icon">
+                    <img src="./images/twitch_ico.svg" alt="Twitch">
+                </div>
+                <span class="link-text">Twitch</span>
+                <div class="link-arrow">↗</div>
+            </a>
+
+            <a href="https://t.me/maksdq" class="link-card" style="--delay: 2">
+                <div class="link-icon">
+                    <img src="./images/tg_ico.svg" alt="Telegram">
+                </div>
+                <span class="link-text">Telegram</span>
+                <div class="link-arrow">↗</div>
+            </a>
+
+            <a href="https://send.monobank.ua/jar/TEH7uKewT" class="link-card" style="--delay: 3">
+                <div class="link-icon">
+                    <img src="./images/link_ico.svg" alt="Support">
+                </div>
+                <span class="link-text">Підтримати автора 💛💙</span>
+                <div class="link-arrow">↗</div>
+            </a>
+        </main>
+
+        <footer>
+            <p>© 2026 Maksde. Всі права вкрадено.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Ефект відстеження мишки для карток (хайпова фіча)
+        document.querySelectorAll('.link-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--x', `${x}px`);
+                card.style.setProperty('--y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+</html>
